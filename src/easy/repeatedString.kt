@@ -38,7 +38,7 @@ fun repeatedString(s: String, n: Long): Long {
     return when {
         s.contains("a").not() -> 0
         s.length == 1 && s == "a"-> n
-        s.length in 2 until n -> {
+        s.length in 2..n -> {
             val repeatCount = floor(n / s.length.toDouble()).toLong()
             val occurrence = s.count { it == 'a' } * repeatCount
 
